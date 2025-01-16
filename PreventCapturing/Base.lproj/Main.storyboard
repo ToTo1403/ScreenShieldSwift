@@ -1,24 +1,170 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="H84-F0-Ti0">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--ViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="PreventCapturing" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cpd-Uw-tOs">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOU CAN NOT CAPTURE ME :-)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBi-yH-xS6">
+                                        <rect key="frame" x="0.0" y="342.66666666666669" width="393" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                <constraints>
+                                    <constraint firstItem="gBi-yH-xS6" firstAttribute="centerY" secondItem="Cpd-Uw-tOs" secondAttribute="centerY" id="0pQ-8k-geK"/>
+                                    <constraint firstAttribute="trailing" secondItem="gBi-yH-xS6" secondAttribute="trailing" id="Khi-Iy-i1S"/>
+                                    <constraint firstItem="gBi-yH-xS6" firstAttribute="leading" secondItem="Cpd-Uw-tOs" secondAttribute="leading" id="d3Q-uV-2U6"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Cpd-Uw-tOs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3wS-35-6Oh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Cpd-Uw-tOs" secondAttribute="bottom" id="8eY-U9-hj8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Cpd-Uw-tOs" secondAttribute="trailing" id="IJV-0u-hg1"/>
+                            <constraint firstItem="Cpd-Uw-tOs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="wxG-uE-qHk"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="956-io-ZLl"/>
+                    <connections>
+                        <outlet property="myView" destination="Cpd-Uw-tOs" id="iQi-rE-9U0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="944.27480916030527" y="-13.380281690140846"/>
+        </scene>
+        <!--Pop UpVC-->
+        <scene sceneID="aIK-tO-EkT">
+            <objects>
+                <viewController storyboardIdentifier="PopUpVC" id="9xs-uY-ki7" customClass="PopUpVC" customModule="PreventCapturing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pOt-OK-tgj">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KGe-RF-eG9">
+                                <rect key="frame" x="16" y="338.66666666666669" width="361" height="200.00000000000006"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="nWM-uB-uuN">
+                                        <rect key="frame" x="10" y="57.666666666666622" width="341" height="84.333333333333314"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="A3K-rP-8Uh">
+                                                <rect key="frame" x="141.66666666666666" y="0.0" width="58" height="24"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noCamera" translatesAutoresizingMaskIntoConstraints="NO" id="1Gx-vl-Uxm">
+                                                        <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="24" id="bjq-NN-D21"/>
+                                                            <constraint firstAttribute="width" constant="24" id="nvl-ZS-AdY"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noRecord" translatesAutoresizingMaskIntoConstraints="NO" id="h0q-g5-88i">
+                                                        <rect key="frame" x="34" y="0.0" width="24" height="24"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="24" id="9lO-4F-0A5"/>
+                                                            <constraint firstAttribute="width" constant="24" id="LAJ-sj-mse"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Due to security policy, the screenshot or screen recording is restricted" textAlignment="center" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3BQ-qO-akE">
+                                                <rect key="frame" x="3.6666666666666572" y="64" width="334" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                <constraints>
+                                    <constraint firstItem="nWM-uB-uuN" firstAttribute="leading" secondItem="KGe-RF-eG9" secondAttribute="leading" constant="10" id="2xq-Wv-ss5"/>
+                                    <constraint firstAttribute="height" constant="200" id="873-wh-EFr"/>
+                                    <constraint firstItem="nWM-uB-uuN" firstAttribute="centerX" secondItem="KGe-RF-eG9" secondAttribute="centerX" id="Mdp-tE-O1P"/>
+                                    <constraint firstAttribute="trailing" secondItem="nWM-uB-uuN" secondAttribute="trailing" constant="10" id="NkF-Wa-Ovc"/>
+                                    <constraint firstItem="nWM-uB-uuN" firstAttribute="centerY" secondItem="KGe-RF-eG9" secondAttribute="centerY" id="wR0-bP-Wcw"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gBg-bH-g7Z"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KGe-RF-eG9" firstAttribute="leading" secondItem="gBg-bH-g7Z" secondAttribute="leading" constant="16" id="9dl-DI-o3X"/>
+                            <constraint firstItem="KGe-RF-eG9" firstAttribute="centerY" secondItem="gBg-bH-g7Z" secondAttribute="centerY" id="KSC-di-twS"/>
+                            <constraint firstItem="gBg-bH-g7Z" firstAttribute="trailing" secondItem="KGe-RF-eG9" secondAttribute="trailing" constant="16" id="etw-Pr-Na1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lilpopupContainer" destination="KGe-RF-eG9" id="IAN-R3-pVF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IiA-D7-0PR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" id="HKK-Wq-wWy">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noCamera" translatesAutoresizingMaskIntoConstraints="NO" id="2O3-UU-4Sb">
+                            <rect key="frame" x="0.0" y="0.0" width="99.333333333333329" height="128"/>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noRecord" id="SOF-rz-ZRv">
+                            <rect key="frame" x="109.33333333333333" y="0.0" width="130.66666666666669" height="128"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="m3d-8Q-9hn"/>
+                </stackView>
+            </objects>
+            <point key="canvasLocation" x="1846.564885496183" y="-13.380281690140846"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bmF-2a-kZO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="H84-F0-Ti0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Y1Y-KD-rKF">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="slY-uD-E5N"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bkn-FB-nTM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="17.557251908396946" y="-13.380281690140846"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="noCamera" width="24" height="24"/>
+        <image name="noRecord" width="24" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
